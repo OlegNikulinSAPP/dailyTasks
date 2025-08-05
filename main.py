@@ -10,7 +10,7 @@ import queue
 
 class TaskManagerApp(wx.Frame):
     def __init__(self):
-        super().__init__(parent=None, title='Менеджер задач', size=(1000, 700))
+        super().__init__(parent=None, title='Менеджер задач', size=wx.Size(1000, 700))
 
         # Очередь для межпоточного взаимодействия
         self.reminder_queue = queue.Queue()
@@ -23,7 +23,7 @@ class TaskManagerApp(wx.Frame):
         # empty(): возвращает True, если очередь пуста, и False в противном случае.
 
         # Инициализация базы данных в главном потоке
-        self.init_db()
+        self.init_db()  # вызов метода в этом же классе
 
         # Создание интерфейса
         self.create_ui()
