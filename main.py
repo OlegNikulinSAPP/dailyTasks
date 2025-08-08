@@ -113,7 +113,7 @@ class TaskManagerApp(wx.Frame):
         # created_at - автоматическая фиксация времени создания (CURRENT_TIMESTAMP)
         # project - название/идентификатор проекта (внешний ключ)
         # assigned_to - идентификатор назначенного сотрудника (исполнитель)
-        # category TEXT - Произвольная категория для группировки задач
+        # category TEXT - произвольная категория для группировки задач
 
         self.cursor.execute('''
             CREATE TABLE IF NOT EXISTS study_tasks (
